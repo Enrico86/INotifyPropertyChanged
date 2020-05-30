@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INotifySuma.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace INotifySuma
         public MainPage()
         {
             InitializeComponent();
+            this.BindingContext = new MainPageViewModel();
         }
     }
 }

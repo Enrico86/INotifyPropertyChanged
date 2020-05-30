@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="INotifySuma.MainPage">
+
+    <StackLayout Margin="10">
+        <Entry Text="{Binding Numero1}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero2}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero3}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero4}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero5}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero6}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero7}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero8}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero9}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Entry Text="{Binding Numero10}" 
+           HorizontalOptions="Fill"
+           VerticalOptions="CenterAndExpand" />
+        <Button Command="{Binding SumCommand}"
+                Text="SUMAR"></Button>
+        <Label Text="{Binding Resultado, StringFormat='La suma de los números es: {0}'}">
+        </Label>
+             
+    </StackLayout>
+
+</ContentPage>
