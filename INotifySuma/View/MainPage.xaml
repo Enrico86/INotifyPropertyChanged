@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:INotifySuma.MyControls"
              mc:Ignorable="d"
              x:Class="INotifySuma.MainPage">
 
@@ -37,11 +38,19 @@
         <Entry Text="{Binding Numero10}" 
            HorizontalOptions="Fill"
            VerticalOptions="CenterAndExpand" />
-        <Button Command="{Binding SumCommand}"
-                Text="SUMAR"></Button>
-        <Label Text="{Binding Resultado, StringFormat='La suma de los números es: {0}'}">
+        <controls:GradientButton HeightRequest="50"
+                                 WidthRequest="200"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 BorderRadius="50"
+                                 Text="{Binding TextTest}"
+                                 GradientStyle="linear-gradient(169deg, rgba(214, 214, 214, 0.05) 0%, rgba(214, 214, 214, 0.05) 25%,rgba(147, 147, 147, 0.05) 25%, rgba(147, 147, 147, 0.05) 50%,rgba(106, 106, 106, 0.05) 50%, rgba(106, 106, 106, 0.05) 75%,rgba(58, 58, 58, 0.05) 75%, rgba(58, 58, 58, 0.05) 100%),linear-gradient(2deg, rgba(151, 151, 151, 0.05) 0%, rgba(151, 151, 151, 0.05) 25%,rgba(118, 118, 118, 0.05) 25%, rgba(118, 118, 118, 0.05) 50%,rgba(60, 60, 60, 0.05) 50%, rgba(60, 60, 60, 0.05) 75%,rgba(62, 62, 62, 0.05) 75%, rgba(62, 62, 62, 0.05) 100%),linear-gradient(260deg, rgba(84, 84, 84, 0.05) 0%, rgba(84, 84, 84, 0.05) 25%,rgba(74, 74, 74, 0.05) 25%, rgba(74, 74, 74, 0.05) 50%,rgba(232, 232, 232, 0.05) 50%, rgba(232, 232, 232, 0.05) 75%,rgba(88, 88, 88, 0.05) 75%, rgba(88, 88, 88, 0.05) 100%),linear-gradient(89deg, rgba(191, 191, 191, 0.05) 0%, rgba(191, 191, 191, 0.05) 25%,rgba(64, 64, 64, 0.05) 25%, rgba(64, 64, 64, 0.05) 50%,rgba(57, 57, 57, 0.05) 50%, rgba(57, 57, 57, 0.05) 75%,rgba(86, 86, 86, 0.05) 75%, rgba(86, 86, 86, 0.05) 100%),linear-gradient(26deg, rgba(189, 189, 189, 0.05) 0%, rgba(189, 189, 189, 0.05) 25%,rgba(134, 134, 134, 0.05) 25%, rgba(134, 134, 134, 0.05) 50%,rgba(143, 143, 143, 0.05) 50%, rgba(143, 143, 143, 0.05) 75%,rgba(12, 12, 12, 0.05) 75%, rgba(12, 12, 12, 0.05) 100%),linear-gradient(90deg, rgb(168, 254, 0),rgb(75, 207, 73))"
+                                 Command="{Binding SumCommand}"></controls:GradientButton>
+        <Label Text="{Binding Resultado, StringFormat='La suma de los números es: {0}'}"
+               FontSize="Large">
         </Label>
-             
+
+
     </StackLayout>
 
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyChanged;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -8,9 +9,8 @@ using Xamarin.Forms;
 
 namespace INotifySuma.ViewModel
 {
-    public class MainPageViewModel
+    public class MainPageViewModel: BaseViewModel
     {
-        
 
         public int Numero1 { get; set; }
         public int Numero2 { get; set; }
@@ -22,9 +22,11 @@ namespace INotifySuma.ViewModel
         public int Numero8 { get; set; }
         public int Numero9 { get; set; }
         public int Numero10 { get; set; }
-        
+
+        public string TextTest { get; set; }
+
         private int resultado;
-        public int Resultado { get => resultado; set { resultado = value; OnPropertyChanged(); } }
+        public int Resultado { get => resultado; set { resultado = value;} }
 
         public MainPageViewModel()
         {
@@ -39,14 +41,13 @@ namespace INotifySuma.ViewModel
             Numero9 = 9;
             Numero10 = 10;
 
+            TextTest = "SUMAR";
+
             SumCommand = new Command(async () =>
             Resultado = Numero1 + Numero2 + Numero3 + Numero4 + Numero5 + Numero6 + Numero7 + Numero8 + Numero9 + Numero10
             );
         }
-
         public ICommand SumCommand { get; set; }
-
-
 
     }
 }
